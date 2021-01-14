@@ -3,9 +3,9 @@ import subprocess as sp
 def task13(pp=4):
     points = 0
     cmd01 = 'cat /opt/cka/answers/bchd.taint'
-    cmd02 = 'cat /opt/cka/answers/node-01.taint'
-    cmd03 = 'cat /opt/cka/answers/node-02.taint'
-    cmd04 = 'cat /opt/cka/answers/node-03.taint'
+    cmd02 = 'cat /opt/cka/answers/node-1.taint'
+    cmd03 = 'cat /opt/cka/answers/node-2.taint'
+    cmd04 = 'cat /opt/cka/answers/node-3.taint'
     out01 = sp.Popen(cmd01, shell=True, stdin=sp.PIPE, stdout=sp.PIPE, stderr=sp.STDOUT, close_fds=True)
     out02 = sp.Popen(cmd02, shell=True, stdin=sp.PIPE, stdout=sp.PIPE, stderr=sp.STDOUT, close_fds=True)
     out03 = sp.Popen(cmd03, shell=True, stdin=sp.PIPE, stdout=sp.PIPE, stderr=sp.STDOUT, close_fds=True)
