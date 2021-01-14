@@ -7,7 +7,7 @@ def task02(pp=4):
     txt = out.stdout.read().decode('utf-8')
     lines = txt.splitlines()
     for line in lines:
-        if line.strip().startswith("node-03   Ready,SchedulingDisabled"):
+        if line.strip().startswith("node-3   Ready,SchedulingDisabled"):
             points += 4
     response = {"task": "task02", "points": float(points), "possible": pp, "msg": [(cmd01, txt)]}
     return response
