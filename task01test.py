@@ -2,7 +2,7 @@ import subprocess as sp
 
 def task01(pp=4):
     points = 0
-    cmd01 = 'kubectl describe ClusterRole appCreator'
+    cmd01 = 'kubectl describe ClusterRole app-creator'
     out = sp.Popen(cmd01, shell=True, stdin=sp.PIPE, stdout=sp.PIPE, stderr=sp.STDOUT, close_fds=True)
     txt = out.stdout.read().decode('utf-8')
     lines = txt.splitlines()
