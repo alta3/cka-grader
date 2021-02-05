@@ -16,7 +16,7 @@ def task13(pp=4):
     txt04 = out04.stdout.read().decode('utf-8')
     lines = [txt01, txt02, txt03, txt04]
     for line in lines:
-        if line.strip() in ['<none>', 'node.kubernetes.io/unschedulable:NoSchedule', 'node-role.kubernetes.io/master:NoSchedule', 'node.kubernetes.io/unreachable:NoSchedule']:
+        if line.strip() in ['<none>', 'node.kubernetes.io/unschedulable:NoSchedule', 'node-role.kubernetes.io/master:NoSchedule', 'node.kubernetes.io/unreachable:NoExecute']:
             points += 1
     response = {"task": "task13", "points": float(points), "possible": pp, "msg": [(cmd01, txt01), (cmd02, txt02), (cmd03, txt03), (cmd04, txt04)]}
     return response

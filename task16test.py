@@ -7,7 +7,7 @@ def task16(pp=7):
     txt = out.stdout.read().decode('utf-8')
     lines = txt.splitlines()
     for line in lines:
-        if line.strip() == "error: a container name must be specified for pod logger, choose one of: [busylog loggingpod]":
+        if line.strip().startswith("error: a container name must be specified for pod logger"):
             points += 3
     cmd02 = 'kubectl logs logger -c busylog'
     out02 = sp.Popen(cmd02, shell=True, stdin=sp.PIPE, stdout=sp.PIPE, stderr=sp.STDOUT, close_fds=True)
