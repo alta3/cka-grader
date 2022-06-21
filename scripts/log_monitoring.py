@@ -1,4 +1,4 @@
-mport os.path
+import os.path
 import pprint as pp
 import subprocess as sp
 
